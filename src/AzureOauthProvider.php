@@ -13,7 +13,7 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
     protected $scopes = ['User.Read'];
     protected $scopeSeparator = ' ';
 
-    protected function getAuthUrl($state)
+    public function getAuthUrl($state)
     {
         return $this->buildAuthUrlFromBase('https://login.microsoftonline.com/common/oauth2/authorize', $state);
     }
